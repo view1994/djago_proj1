@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello view ~</title>
+    <link rel="stylesheet" href="{% static '/css/semantic.css' %}">
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <script src="{% static '/js/semantic.js' %}"></script>
+</head>
+<body>
+    <div class="ui thin  sidebar inverted vertical menu">
+        <div class="item">option 1</div>
+        <div class="item">option 2</div>
+        <div class="item">option 3</div>
+    </div>
+    <div class="pusher">
+        <div class="ui menu">
+            <div class="header item" id="menu">
+                menu
+                <i class="content icon"></i>
+            </div>
+            <div class="item">about us</div>
+            <div class="item">location</div>
+            <a class="active item">menu item 1 </a>
+            <a class="item">menu item 3 </a>
+            <a class="item">menu item 2 </a>
+        </div>
+        <div class="ui breadcrumb">
+          <a class="section">主页</a>
+          <div class="divider"> / </div>
+          <a class="section">商店</a>
+          <div class="divider"> / </div>
+          <div class="active section">T恤</div>
+        </div>
+        <div class="ui text container segment">
+            <div class="ui divided items">
+                <div class="item">
+                    <div class="content">
+                        <div class="header">
+                            this is a title!
+                        </div>
+                        <div class="description">
+                            <p>
+                                some description..
+                            </p>
+                        </div>
+                        <div class="extra">
+                            <div class="ui label">
+                                label1
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="header">
+                            this is a title!
+                        </div>
+                        <div class="description">
+                            <p>
+                                some description..
+                            </p>
+                        </div>
+                        <div class="extra">
+                            <div class="ui label">
+                                label1
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="header">
+                            this is a title!
+                        </div>
+                        <div class="description">
+                            <p>
+                                some description..
+                            </p>
+                        </div>
+                        <div class="extra">
+                            <div class="ui label">
+                                label1
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui pagination menu">
+                <a class="active item" href="#"><</a>
+                <div class="item">page 1 of 10</div>
+                <a class="active item" href="#">></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#menu').click(function () {
+            $('.ui.sidebar').sidebar('toggle')
+        });
+    </script>
+</body>
+</html>
