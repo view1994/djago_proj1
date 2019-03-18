@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FaceRecog log on</title>
+    <link rel="stylesheet" href="{% static '/css/semantic.css' %}">
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <script src="{% static '/js/semantic.js' %}"></script>
+</head>
+<body>
+    <!--    top memu-->
+    <div class="ui attached stackable menu">
+      <div class="ui container">
+        <a class="item">
+          <i class="home icon"></i> 登录
+        </a>
+        <a class="disabled item">
+          <i class="info icon"></i> 录入数据
+        </a>
+        <div class="ui simple dropdown item">
+          识别人脸
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="disabled item"><i class="edit icon"></i> 识别图中人脸</a>
+            <a class="disabled item"><i class="globe icon"></i> 识别视频中人脸</a>
+            <a class="disabled item"><i class="settings icon"></i> 退出账号</a>
+          </div>
+        </div>
+        <div class="right item">
+          <div class="ui input"><input type="text" placeholder="请登录..."></div>
+        </div>
+      </div>
+    </div>
+    <!-- login page -->
+    <div class="ui horizontal segments">
+        <div class="ui left segment">
+            <img src="../static/images/mini cloud.jpg" class="ui centered medium image"  >
+            <h2 class="ui teal centered header">welcome to FaceRecog~</h2>
+        </div>
+        <div class="ui right segment">
+            <div class="ui middle aligned center aligned grid">
+          <div class="column">
+            <h2 class="ui teal image header">
+              <img src="../static/images/mini cloud.jpg" class="image">
+              <div class="content">
+                登录到账号
+              </div>
+            </h2>
+            <form class="ui large form">
+              <div class="ui stacked segment">
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input type="text" name="email" placeholder="邮箱地址">
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input type="password" name="password" placeholder="密码">
+                  </div>
+                </div>
+                <div class="ui fluid large teal submit button">登录</div>
+              </div>
+
+              <div class="ui error message"></div>
+
+            </form>
+
+            <div class="ui message">
+              新用户？ <a href="register">注册</a>
+            </div>
+          </div>
+    </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

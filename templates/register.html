@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="{% static '/css/semantic.css' %}">
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <script src="{% static '/js/semantic.js' %}"></script>
+</head>
+<body>
+    <!--    top memu-->
+    <div class="ui attached stackable menu">
+      <div class="ui container">
+        <a class="item" href="login">
+          <i class="home icon"></i> 登录
+        </a>
+        <a class="disabled item">
+          <i class="info icon"></i> 录入数据
+        </a>
+        <div class="ui simple dropdown item">
+          识别人脸
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="disabled item"><i class="edit icon"></i> 识别图中人脸</a>
+            <a class="disabled item"><i class="globe icon"></i> 识别视频中人脸</a>
+            <a class="disabled item"><i class="settings icon"></i> 退出账号</a>
+          </div>
+        </div>
+        <div class="right item">
+          <div class="ui input"><input type="text" placeholder="请登录..."></div>
+        </div>
+      </div>
+    </div>
+    register page~
+</body>
+</html>
