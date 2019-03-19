@@ -12,6 +12,10 @@ def FR_login_page(request):
 def FP_register_page(request):
     return render(request, '../templates/register.html')
 
+def FP_regist_confirm(request):
+    #get account info on page
+    return render(request, '../templates/login.html')
+
 def FP_home(request):
     if account_login:
         return FR_home_page(request)

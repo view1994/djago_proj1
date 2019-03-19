@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/' , hello_view),
     path('login',FR_login_page),
-    path('register',FP_register_page)
+    path('register',FP_register_page),
+    path('regist_submit',FP_regist_confirm),
 ]
