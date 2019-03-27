@@ -9,10 +9,9 @@ class AccountInfo(Document):
     '''
         账号信息数据库数据结构
     '''
-    login = BooleanField( default= False)
-    usr_name = StringField()
-    email = StringField( primary_key= True )
-    password = StringField( min_length = 8 )
+    login_flag = BooleanField( default= False)
+    usr_name = StringField(primary_key= True)
+    password = StringField( min_length = 6 )
     regis_date = DateField( )
     facial_count = IntField( default= 0 )
 

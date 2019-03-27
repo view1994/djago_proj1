@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Django_app1.views import *
-
+from django.conf.urls import url
 urlpatterns = [
     path('',FP_home),
     path('admin/', admin.site.urls),
     path('hello/' , hello_view),
     path('login',FR_login_page),
     path('register',FP_register_page),
-    path('regist_submit',FP_regist_confirm),
+    url(r'^regist_submit$',FP_regist_confirm),
 ]

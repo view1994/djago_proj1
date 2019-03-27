@@ -48,12 +48,12 @@
         <div class="ui one column centered grid" >
                 <div c class="ui column"style="width: 400px; ">
                         <div class="ui small  container teal segment" >
-                        <form class="ui form">
+                        <form class="ui form" action="/regist_submit" method="get">
                             <h4 class="ui dividing header">用户信息</h4>
                             <div class="required field">
                                 <label>Username or email address</label>
-                                <input type="text" name="login" id="login_field" placeholder="请输入用户名">
-                          </div>
+                                <input type="text" name="username"  placeholder="请输入用户名">
+                            </div>
                             <div class="required field">
                                 <label>Password</label>
                                 <input type="password" name="password" placeholder="请输入密码">
@@ -62,14 +62,64 @@
                                 <label>Password Confirm</label>
                                 <input type="password" name="password_confirm" placeholder="请确认密码">
                           </div>
-                            <div class="ui button" tabindex="0" >
-                                <a href="regist_submit">Submit</a>
+                            <button class="ui fluid large teal submit button" href="regist_submit">Submit</button>
+                            <div class="ui error message">
+                                <ul class="list">
+                                    <li>Please put the same value in both fields</li>
+                                    <li>Please put different values for each field</li>
+                                </ul>
                             </div>
                         </form>
                     </div>
                 </div>
         </div>
-
     </div>
+    <script>
+        $('.ui.form')
+          .form({
+            fields: {
+              username: {
+                identifier: 'username',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter a username'
+                  },
+                    {
+                    type   : 'minLength[4]',
+                    prompt : 'Your user name must be at least {ruleValue} characters'
+                  }
+                ]
+              },
+              password: {
+                identifier: 'password',
+                rules: [
+                  {
+                    type   : 'empty',
+                    prompt : 'Please enter a password'
+                  },
+                  {
+                    type   : 'minLength[6]',
+                    prompt : 'Your password must be at least {ruleValue} characters'
+                  }
+                ]
+              },
+              password_confirm: {
+                identifier: 'password_confirm',
+                rules: [
+                  {
+                    type   : 'match[password]',
+                    prompt : 'Please enter the same password to confirm'
+                  },
+                  {
+                    type   : 'minLength[6]',
+                    prompt : 'Your password must be at least {ruleValue} characters'
+                  }
+                ]
+              }
+            }
+          })
+        ;
+    </script>
 </body>
 </html>
