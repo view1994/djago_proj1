@@ -77,18 +77,23 @@
     <script>
         $('.ui.form')
           .form({
+            inline : true,
+            on     : 'blur',
             fields: {
               username: {
                 identifier: 'username',
                 rules: [
-                  {
-                    type   : 'empty',
-                    prompt : 'Please enter a username'
-                  },
-                    {
-                    type   : 'minLength[4]',
-                    prompt : 'Your user name must be at least {ruleValue} characters'
-                  }
+                  {% for name in nameList %}
+                   {
+                     type   : 'notExactly[{{ name }}]',
+                     prompt : '{ruleValue} has been used, please use another one!'
+                   },
+                  {% endfor %}
+                   {
+                     type   : 'empty',
+                     prompt : 'Please enter a username'
+                   }
+
                 ]
               },
               password: {

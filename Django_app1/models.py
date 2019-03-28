@@ -6,9 +6,7 @@ connect('wbsite', host='127.0.0.1', port=27017)
 # ORM
 # Create your models here.
 class AccountInfo(Document):
-    '''
-        账号信息数据库数据结构
-    '''
+    # 账号信息数据库数据结构
     login_flag = BooleanField( default= False)
     usr_name = StringField(primary_key= True)
     password = StringField( min_length = 6 )
