@@ -19,3 +19,7 @@ class FacialFeature(Document):
     name = StringField()
     facial_feature = ListField(ListField())
 
+class RoomInfo(Document):
+    url = StringField()
+    price = IntField()
+    meta = {'collection': 'RoomInfo'}

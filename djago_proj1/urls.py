@@ -18,10 +18,14 @@ from django.urls import path
 from Django_app1.views import *
 from django.conf.urls import url
 urlpatterns = [
-    path('',FP_home),
+    path('',FR_home),
     path('admin/', admin.site.urls),
     path('hello/' , hello_view),
     path('login',FR_login_page),
-    path('register',FP_register_page),
-    url(r'^regist_submit$',FP_regist_confirm),
+    path('register',FR_register_page),
+    url(r'^regist_submit$',FR_regist_confirm),
+    url(r'^login_submit$',FR_login_confirm),
+    url(r'^room107$',hello_view),
+    url(r'^index/', index),
+    url(r'^chart/', chart),
 ]
